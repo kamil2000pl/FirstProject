@@ -2,7 +2,6 @@ package oop;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -24,20 +23,14 @@ public class App {
                 String Student_Number = sc.next();
                 int[] codes = new int[8];
                 int[] results = new int[8];
-//                System.out.println("Student number " + Student_Number);
-//                while (sc.hasNext())
                 for (int i = 0; i < 8; i++)
                 {
-//                    System.out.println("iteration " + i);
                     int Subject_Code = sc.nextInt();
                     codes[i] = Subject_Code;
                     int Mark = sc.nextInt();
                     results[i] = Mark;
-                    System.out.println("subject - " + Subject_Code);
-                    System.out.println(Mark);
                 }
-//                System.out.println(Arrays.toString(results));
-                selectFiveGrades(codes, results);
+                System.out.printf(Student_Number + " %.2f\n", calculateAverage(selectFiveGrades(codes, results)));
 
 
             }
@@ -84,9 +77,12 @@ public class App {
         return results;
     }
 
-//    TODO: calculateAverage Method
-//    private double calculateAverage( int[] selectedGrades)
-//    {
-//
-//    }
+    public static double calculateAverage(int[] selectedGrades)
+    {
+        int total = 0;
+        for (int selectedGrade : selectedGrades) {
+            total += selectedGrade;
+        }
+        return ((double) total / selectedGrades.length);
+    }
 }
