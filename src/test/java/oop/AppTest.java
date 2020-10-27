@@ -4,6 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// Kamil Jozefowicz
+// D00229452
+// https://github.com/kamil2000pl/FirstProject
+
 class AppTest {
 
     @Test
