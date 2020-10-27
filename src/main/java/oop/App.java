@@ -5,14 +5,16 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class App {
+public class App
+{
     public static void main(String[] args)
     {
         readFile("JC_Results.txt");
 
     }
 
-    public static void readFile(String file) {
+    public static void readFile(String file)
+    {
         try {
             Scanner sc = new Scanner(new File(file));
 
