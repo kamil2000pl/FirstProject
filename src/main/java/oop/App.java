@@ -2,6 +2,7 @@ package oop;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -32,9 +33,10 @@ public class App {
                     codes[i] = Subject_Code;
                     int Mark = sc.nextInt();
                     results[i] = Mark;
-//                    System.out.println("subject - " + Subject_Code);
-//                    System.out.println(Mark);
+                    System.out.println("subject - " + Subject_Code);
+                    System.out.println(Mark);
                 }
+//                System.out.println(Arrays.toString(results));
                 selectFiveGrades(codes, results);
 
 
@@ -50,33 +52,34 @@ public class App {
     {
         int[] results = new int[5];
         int[] temp = new int[5];
-        int count = 0;
+        int countCore = 0;
+        int countOptional = 0;
         for (int i = 0; i < 8; i++)
         {
-            if (codes[i] != 218 && codes[i] == 1)
+            if (codes[i] == 1)
             {
-                results[count] = grades[i];
-                count++;
+                results[countCore] = grades[i];
+                countCore++;
             }
-            else if (codes[i] != 218 && codes[i] == 2)
+            else if (codes[i] == 2)
             {
-                results[count] = grades[i];
-                count++;
+                results[countCore] = grades[i];
+                countCore++;
             }
-            else if (codes[i] != 218 && codes[i] == 3)
+            else if (codes[i] == 3)
             {
-                results[count] = grades[i];
-                count++;
+                results[countCore] = grades[i];
+                countCore++;
             }
-            else if (!(codes[i] == 218))
+            else if (codes[i] != 218)
             {
-                temp[count] = grades[i];
-                count++;
+                temp[countOptional] = grades[i];
+                countOptional++;
             }
         }
         Arrays.sort(temp);
-        results[3] = temp[1];
-        results[4] = temp[2];
+        results[3] = temp[4];
+        results[4] = temp[3];
 
         return results;
     }
