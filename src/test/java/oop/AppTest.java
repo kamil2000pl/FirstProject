@@ -98,6 +98,83 @@ class AppTest {
     }
 
     @Test
-    void calculateAverage() {
+    void calculateAverage1() {
+        System.out.println("calculateAverage1");
+        int[] selectedGrades = {65,58,45,60,60};
+        double expResult = 57.6;
+        double average = App.calculateAverage(selectedGrades);
+        assertEquals(expResult, average, 0.0);
+    }
+    @Test
+    void calculateAverage2() {
+        System.out.println("calculateAverage2");
+        int[] selectedGrades = {65,58,45,100,77};
+        double expResult = 69;
+        double average = App.calculateAverage(selectedGrades);
+        assertEquals(expResult, average, 0.0);
+    }
+    @Test
+    void calculateAverage3() {
+        System.out.println("calculateAverage3");
+        int[] selectedGrades = {40,35,28,88,63};
+        double expResult = 50.8;
+        double average = App.calculateAverage(selectedGrades);
+        assertEquals(expResult, average, 0.0);
+    }
+    @Test
+    void calculateAverage4() {
+        System.out.println("calculateAverage4");
+        int[] selectedGrades = {63,68,26,89,77};
+        double expResult = 64.6;
+        double average = App.calculateAverage(selectedGrades);
+        assertEquals(expResult, average, 0.0);
+    }
+    @Test
+    void calculateAverage5() {
+        System.out.println("calculateAverage5");
+        int[] selectedGrades = {53,24,64,52,42};
+        double expResult = 47;
+        double average = App.calculateAverage(selectedGrades);
+        assertEquals(expResult, average, 0.0);
+    }
+    @Test
+    void calculateAverage6() {
+        System.out.println("calculateAverage6");
+        int[] selectedGrades = {44,56,64,97,88};
+        double expResult = 69.8;
+        double average = App.calculateAverage(selectedGrades);
+        assertEquals(expResult, average, 0.0);
+    }
+    @Test
+    void calculateAverage7() {
+        System.out.println("calculateAverage7");
+        int[] selectedGrades = {76,67,76,78,76};
+        double expResult = 74.6;
+        double average = App.calculateAverage(selectedGrades);
+        assertEquals(expResult, average, 0.0);
+    }
+    @Test
+    void calculateAverage8() {
+        System.out.println("calculateAverage8");
+        int[] selectedGrades = {63,53,64,63,52};
+        double expResult = 59;
+        double average = App.calculateAverage(selectedGrades);
+        assertEquals(expResult, average, 0.0);
+    }
+    @Test
+    void calculateAverage9() {
+        System.out.println("calculateAverage9");
+        int[] selectedGrades = {53,0,0,54,52};
+        double expResult = 31.8;
+        double average = App.calculateAverage(selectedGrades);
+        assertEquals(expResult, average, 0.0);
+    }
+    @Test
+    void calculateAverage10() {
+        System.out.println("calculateAverage10");
+        int[] selectedGrades = {52,63,68,87,63};
+        double expResult = 66.6;
+        double average = App.calculateAverage(selectedGrades);
+        assertEquals(expResult, average, 0.0);
     }
 }
